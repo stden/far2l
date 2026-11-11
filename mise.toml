@@ -1,0 +1,14 @@
+[tools]
+go = "1.18"
+cmake = "3.31.12"
+
+[tasks.check]
+run = "git diff --check"
+
+[tasks."testing:build"]
+run = "go build ./..."
+dir = "testing"
+
+[tasks."testing:test"]
+run = "go test ./..."
+dir = "testing"
